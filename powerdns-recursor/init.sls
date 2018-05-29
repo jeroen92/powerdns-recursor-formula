@@ -1,4 +1,4 @@
-{% from "powerdns-recursor/map.jinja" import 'powerdns-recursor' with context %}
+{% from "powerdns-recursor/map.jinja" import powerdns with context %}
 
 powerdns-recursor:
   pkg.installed:
