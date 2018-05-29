@@ -2,11 +2,11 @@
 
 powerdns-recursor:
   pkg.installed:
-    - name: {{ powerdns-recursor.lookup.pkg }}
+    - name: {{ powerdns.lookup.pkg }}
     - refresh_db: True
 
   service.running:
-    - name: {{ powerdns-recursor.lookup.service }}
+    - name: {{ powerdns.lookup.service }}
     - enable: True
     - require:
       - pkg: powerdns-recursor
