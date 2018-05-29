@@ -1,0 +1,4 @@
+powerdns-recursor:
+  config:
+    api: 'yes'
+    api-key: d34db33f

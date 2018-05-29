@@ -1,0 +1,16 @@
+{% set powerdns-recursor = salt['pillar.get']('powerdns-recursor', {
+    'lookup': salt['grains.filter_by']({
+        'FreeBSD': {
+            'pkg': 'powerdns-recursor',
+            'config_file': '/usr/local/etc/pdns/recursor.conf',
+            'service': 'pdns-recursor',
+            'config_user': 'root',
+            'config_group': 'wheel',
+        }
+    }),
+    'config': salt['grains.filter_by']({
+        'FreeBSD': {
+            'config-dir': '/usr/local/etc/pdns/',
+        },
+    }),
+}, merge=True) %}
